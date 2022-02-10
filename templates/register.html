@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Responsive Food/Resturant Website Design Tutorial</title>
+    <script src="{%static 'js/jquery.js' %}"></script>
+    <script src="{%static 'js/adwin.js' %}"></script>
+    <link rel="stylesheet" href="{%static 'css/css.css' %}">
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+  </head>
+<body>
+  {% load static %}
+
+  <!-- contact section starts  -->
+  
+  <section id="contact" class="container-fluid">
+  
+    <div class="heading text-center">
+        <h1><span>Order </span> Now</h1>
+    </div>
+
+    <div class="row justify-content-center">
+
+        <form  method="post" action="register" class="col-md-7">
+              {% csrf_token %}
+            <div class="inputBox">
+                <input type="text" name="username" required>
+                <h3>full name</h3>
+            </div>
+
+            <div class="inputBox">
+                <input type="email" name="email" required>
+                <h3>e-mail</h3>
+            </div>
+
+            <div class="inputBox">
+                <input type="text" name="phone" required>
+                <h3>Phone number</h3>
+            </div>
+
+            <div class="inputBox">
+                <textarea required name="address" id="" cols="30" rows="10"></textarea>
+                <h3>address</h3>
+            </div>
+
+                      <div style="font-size: medium;">
+                          
+                          <hr/>
+                      <input type='checkbox' class="chkbx" value=' Chicken_Mandi' />Chicken biriyani ₹ 125
+                      &nbsp&nbsp&nbsp&nbsp&nbsp
+                        <input type='checkbox'  class= "chkbx" value=' Taj_Special_Nan-Korma '/>Taj Special Nan-Korma ₹ 150
+                        &nbsp&nbsp&nbsp&nbsp&nbsp
+                        <input type='checkbox' class="chkbx" value=' Shawarma_Roll ' />Shawarma Roll  ₹ 80
+                        &nbsp 
+                           
+                        <hr/>
+                        <input type='checkbox'  class= "chkbx" value=' Noddles '/>Noddles ₹ 80
+                        &nbsp&nbsp&nbsp&nbsp&nbsp
+                        <input type='checkbox'  class= "chkbx" value=' Paneer_butter_masala '/>Paneer butter masala  ₹ 139  
+                        &nbsp&nbsp&nbsp&nbsp&nbsp
+                        <input type='checkbox'  class= "chkbx" value=' Chhole_Battori '/>Chhole Battori   ₹ 190
+                        &nbsp&nbsp&nbsp&nbsp&nbsp
+                        <input type='checkbox' class= "chkbx" value=' Tomato_soup   '/>Tomato soup    ₹ 80
+                        <hr/>
+                        <input type='checkbox' class= "chkbx" value=' Veg_Biryani '/>Veg Biryani  ₹ 90
+                        &nbsp&nbsp&nbsp&nbsp&nbsp
+                        <input type='checkbox' class= "chkbx" value=' Tandoori_Chicken  '/>Tandoori Chicken    ₹ 180
+                        &nbsp&nbsp&nbsp&nbsp&nbsp
+                        <input type='checkbox' class= "chkbx" value=' Pizza  '/>Pizza ₹ 195
+
+                      <hr/>
+                        
+                        <textarea  type='text' cols="45" rows="5" id='selectedtext' name ="selected"  placeholder="Selected items"  ></textarea>
+                        <input type="submit" value="send"  class="btn btn-success">
+                        <hr/>
+                        <!-- <input type='text' id='count'  placeholder ="Number of selected checkboxs">-->
+                        
+
+        </form>
+
+    </div>
+
+</section>
+  
+      
+  
+      
+  
+          
+
+  
+
+</body>
+</html>

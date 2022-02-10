@@ -1,0 +1,866 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mini Project</title>
+    <link rel="stylesheet" href="fonts/font-awesome.css">
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="fonts/google-fonts.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="./node_modules/bootstrap-social/bootstrap-social.css">  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" integrity="sha512-f8mUMCRNrJxPBDzPJx3n+Y5TC5xp6SmStstEfgsDXZJTcxBakoB5hvPLhAfJKa9rCvH+n3xpJ2vQByxLk4WP2g==" crossorigin="anonymous" />
+      
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        
+        .row-header {
+            margin: 0px auto;
+            padding: 0px 0px; }
+          
+          .row-content {
+            margin: 0px auto;
+            padding: 50px 0px;
+            border-bottom: 1px ridge;
+            min-height: 260px; }
+          
+          .footer {
+            background-color:#95DBE5FF;
+            margin: 0px auto;
+            padding: 20px 0px; }
+          
+          .jumbotron {
+            background-color: rgb(40, 192, 192);
+            margin: 0px auto;
+            padding: 70px 30px; 
+          color: floralwhite;}
+          
+          address {
+            font-size: 80%;
+            margin: 0px;
+            color: #0f0f0f; }
+          
+            body {
+                
+                z-index: 0; }
+     
+          
+          .navbar-dark {
+            background-color:#078282FF }
+          
+          .tab-content {
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding: 10px; }
+          
+          .carousel {
+            background-image: linear-gradient(to top, #c71d6f 0%, #d09693 100%);     
+          }
+            .carousel .carousel-item {
+              height: 350px; }
+              .carousel .carousel-item img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                min-height: 350px; }
+          
+          #carouselButton {
+            right: 0;
+            position: absolute;
+            bottom: 0px; }
+          
+          .modal-header {
+            background-color:#078282FF ;
+            color: floralwhite; }
+          
+          .modal-body {
+            background-color: #f2ddf7; }
+          
+          .cl, .close, .close :hover, .close :active {
+            color: floralwhite; }
+          
+          .menu{
+          border: 2px solid #6ff5ea;
+          border-radius: 10px;
+          background-color: #f2ddf7;
+          
+          }
+          
+          
+          .menu1{
+            border: 2px solid #6ff5ea;
+            border-radius: 10px;  
+           }
+            
+            .menu2{
+              border: 2px solid #e198f3;
+              border-radius: 10px;    
+              }
+          #menu-content img{
+          height: 160px;
+          width: 210px;
+          }
+          .map-container-3{
+            overflow:hidden;
+            padding-bottom:50.25%;
+            position:relative;
+            height:0;
+            }
+            .map-container-3 iframe{
+            left:0;
+            top:0;
+            height:100%;
+            width:100%;
+            position:absolute;
+            }
+          
+        </style>
+
+        <style>
+
+            
+
+
+.registration-form{
+	padding: 50px 0;
+}
+
+.registration-form form{
+    background-color: #fff;
+    max-width: 600px;
+    margin: auto;
+    padding: 50px 70px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.registration-form .form-icon{
+	text-align: center;
+    background-color: #5891ff;
+    border-radius: 50%;
+    font-size: 40px;
+    color: white;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 50px;
+    line-height: 100px;
+}
+
+.registration-form .item{
+	border-radius: 20px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+}
+
+.registration-form .create-account{
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #5791ff;
+    border: none;
+    color: white;
+    margin-top: 20px;
+}
+
+.registration-form .social-media{
+    max-width: 600px;
+    background-color: #fff;
+    margin: auto;
+    padding: 35px 0;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: #9fadca;
+    border-top: 1px solid #dee9ff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.registration-form .social-icons{
+    margin-top: 30px;
+    margin-bottom: 16px;
+}
+
+.registration-form .social-icons a{
+    font-size: 23px;
+    margin: 0 3px;
+    color: #5691ff;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 45px;
+    display: inline-block;
+    height: 45px;
+    text-align: center;
+    background-color: #fff;
+    line-height: 45px;
+}
+
+.registration-form .social-icons a:hover{
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+@media (max-width: 576px) {
+    .registration-form form{
+        padding: 50px 20px;
+    }
+
+    .registration-form .form-icon{
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        line-height: 70px;
+    }
+}
+        </style>
+    
+    <script src="{%static 'js/qwe.js' %}">
+    
+    </script>
+    <script src="{%static 'js/jquery.js' %}"></script>
+    <script src="{%static 'js/adwin.js' %}"></script>
+    <link rel="stylesheet" href="{%static 'css/css.css' %}">
+  </head>
+<body>
+  
+<!-- header section starts -->
+
+<header id="header">
+
+  <nav>
+      <ul>
+          <li><a href="#home">home</a></li>
+          <li><a href="#special">special</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#dish">dishes</a></li>
+          <li><a href="#contact">contact</a></li>
+      </ul>
+  </nav>
+  
+  <div class="fas fa-hamburger"></div>
+  
+  <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+  
+  </header>
+  
+  <!-- header section ends -->
+  
+  
+  <!-- home section starts  -->
+  
+  <section id="home" class="container-fluid">
+  
+  <div class="row min-vh-100 align-items-center">
+      
+  <div class="col-md-8 ml-md-5 text-md-left text-center content">
+      <h1>food that you can't resist</h1>
+      <h2>enjoy the marvelous taste</h2>
+      <p>Pull up a chair. Take a taste. Come join us. Life is so endlessly delicious.</p>
+      <a href="#special"><button>get started</button></a>
+  </div>
+  
+  <div class="video-container">
+      <video src="{%static 'images/vid2.mp4' %}" autoplay loop class="vid vid1"></video>
+      <video src="{%static 'images/vid1.mp4' %}" autoplay loop class="vid vid2"></video>
+      <video src="{%static 'images/vid3.mp4' %}" autoplay loop class="vid vid3"></video>
+  </div>
+  
+  <div class="controls">
+      <div class="dots dot1"></div>
+      <div class="dots dot2"></div>
+      <div class="dots dot3"></div>
+  </div>
+  
+  </div>
+  
+  </section>
+  
+  <!-- home section ends  -->
+  
+   <!--booking table starts-->
+
+<div style="font-size: 14px; font-size :18px;" id="reserve_table">
+
+   <div   class="modal" tabindex="-1" role="dialog" id="tableReserve">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Reserve a Table</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="cl">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+
+
+
+
+            
+            <section id="reserve_table" class="container-fluid">
+  
+                <div class="heading text-center">
+                    
+                </div>
+            
+                <div class="row justify-content-center">
+            
+                    
+
+    <div class="registration-form">
+        <form  method="post" >
+            {% csrf_token %}
+            <div class="form-icon">
+                <span><i class="icon icon-user"></i></span>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="username" name="username1" placeholder="Username">
+            </div>
+            
+            <div class="form-group">
+                <input type="text" class="form-control item" id="email" name="email1"  placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="phone-number" name="phone1" placeholder="Phone Number">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item"  name="tables_reserved" placeholder="Tables count">
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control item" id="birth-date" name="date1" placeholder="Date">
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control item"  name="time1" placeholder="Time">
+            </div>
+
+           
+            <div class="form-group">
+                <button type="submit" value="send" class="btn btn-block create-account">Reserve Table</button>
+            </div>
+            
+            
+        </form>
+    </div>
+
+
+            
+                </div>
+            
+            </section>
+            
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="jumbotron"> 
+        <div class="container">
+            <div class="row row-header"> 
+                <div class="col-12 col-sm-6">
+                    <h1>Taj Restaurant</h1>
+                    <h5>Swaad India Ka!</h5>
+                    <p>India is a country of wide variety of cuisine. Ranging from lip smacking North Indian chatpata khana to soothing South Indian dishes, from chatakedaar Gujarati thali to tasty north eastern food. We bring to you the taste of India at one place.</p>
+                </div>
+                <div class="col-12 col-sm-3 align-items-center">
+                    <img src="./img/logo.png" alt="" class="img-fluid">
+                </div>
+                <div  class="col-12 col-sm-3 align-self-center">
+                    <a class="btn btn-block bt-sm nav-link btn-warning" id="reserve">Reserve Table</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+</div>
+    <!-- stops-->
+
+
+
+  <!-- special card section starts  -->
+  
+  <section id="special" class="container-fluid">
+  
+  <div class="heading text-center">
+  <h1>our <span>special</span></h1>
+  <p></p>
+  </div>
+  
+  
+  <div class="card-container">
+  
+      <div class="card">
+          <img src="{%static 'images/caard1.jpg' %}" alt="">
+          <p>Shawarma is a Levantine meat preparation, where thin cuts of chicken are stacked in a cone-like shape on a vertical rotisserie</p>
+          <a ><button>Shawarma</button></a>
+      </div>
+  
+      <div class="card">
+          <img src="{%static 'images/caard2.jpg' %}" alt="">
+          <p>Pieces of chicken are gently simmered in a rich, creamy sauce with layers of sweet and spicy flavors. Naan is a leavened, oven-baked flatbread</p>
+          <a ><button> Nan-Korma</button></a>
+      </div>
+  
+      <div class="card">
+          <img src="{%static 'images/zxc.jpg' %}" alt="">
+          <p>Mandi is flavoured rice with chicken, and tastes like the biryani and is dry. It is packed with flavours and taste of the perfect blend of spices.</p>
+          <a ><button>Biriyani</button></a>
+      </div>
+  
+  </div>
+  
+  </section>
+  
+  <!-- special card section ends  -->
+  <!--- special 2-->
+  <div style="padding: 50px;
+  font-size : 14px">
+  <div class="row row-content align-items-center menu1">
+    <div class="col-12 col-sm-4 order-sm-last col-md-3">
+        <h3>Our Lipsmacking Culinary Creations</h3>
+    </div>
+    <div class="col col-sm order-sm-first col-md">
+        <div class="media">
+            <img src="{%static 'images/qwe2.jpg' %}"  class="d-flex mr-3 img-thumbnail align-self-center">
+            
+            <div class="media-body">
+                <h2 class="mt-0">Chhole Bhature</h2>
+                <span class="badge badge-danger">HOT</span>
+                <span class="badge badge-pill badge-secondary">Rs.290</span>
+                <p d-none d-sm-block>Chole Bhature is one of the most popular Punjabi dish liked almost all over India. Who can say no to a spiced tangy chickpea curry and a soft and fluffy fried leavened Bhatura. Enjoy it's best varieties here!</p>
+            </div>
+           
+        </div>
+        
+      </div>
+</div>
+
+<div class="row row-content align-items-center menu2">
+    <div class="col-12 col-sm-4 col-md-3">
+        
+        <h3>This Month's Promotions</h3>
+    </div>
+    <div class="col col-sm col-md">
+        <div class="media">
+                         <div class="media-body">
+                <h2 class="mt-0">Weekend Grand Buffet
+                    <span class="badge badge-danger">NEW</span>
+                </h2>
+               
+                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just Rs. 1499 per person </p>  
+            </div>
+            <img src="{%static 'images/qwe11.jpg' %}" alt="" class="d-flex ml-3 img-thumbnail align-self-center">
+
+        </div>
+    </div>
+</div>
+
+<div class="row row-content align-items-center menu1">
+    <div class="col-12 col-sm-4 order-sm-last col-md-3"> 
+        <h3>Meet our Culinary Specialists</h3>
+    </div>
+    <div class="col col-sm order-sm-first  col-md">
+      <div class="media">
+          <img src="{%static 'images/qwe4.jpg' %}" alt="" class="d-flex mr-3 align-self-center img-thumbnail">
+          <div class="media-body">
+        <h2>Nidhi Gahlawat</h2>
+        <h4>Executive Chef</h4>
+        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, she specializes in creating mouthwatering Indian cuisine. </p>
+          </div>
+      </div>
+      
+    </div>
+</div>
+
+</div>
+
+</div>
+<!-- stops--> 
+
+<!-- about section starts  -->
+  
+  <section id="about" class="container">
+  
+      <div class="heading text-center">
+      <h1><span>about</span> us</h1>
+      
+        <!--about2-->
+
+  <div style="font-size : 14px;">
+  <div class="row row-content">
+    <div class="col-12 col-sm-6">
+        <h2>Our History</h2>
+        <p>Started in 2019, Swadisht quickly established itself as a culinary icon par excellence in New Delhi. With its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list clientele in India.  Featuring four of the best three-star Michelin chefs in the world, you never know what will arrive on your plate the next time you visit us.</p>
+        <p>The restaurant traces its humble beginnings to <em>The Frying Pan</em>, a successful chain started by our CEO, Mr. Peter Pan, that featured for the first time the world's best cuisines in a pan.</p>
+    </div>
+        <div class="col-sm">
+            <div class="card">
+                <h3 class="card-header bg-primary text-white">Facts At a Glance</h3>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-6">Started</dt>
+                        <dd class="col-6">3 Feb. 2019</dd>
+                        <dt class="col-6">Major Stake Holder</dt>
+                        <dd class="col-6">HK Fine Foods Inc.</dd>
+                        <dt class="col-6">Last Year's Turnover</dt>
+                        <dd class="col-6">₹1,54,25,375</dd>
+                        <dt class="col-6">Employees</dt>
+                        <dd class="col-6">40</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+
+<div class="row row-content">
+    <div class="col-12">
+        <h2>Corporate Leadership</h2>
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a href="#peter" class="nav-link active" role="tab" data-toggle="tab">Peter Pan, CEO</a></li>
+            <li class="nav-item"><a href="#danny" class="nav-link" role="tab" data-toggle="tab">Dhanasekaran Witherspoon, CFO</a></li>
+            <li class="nav-item"><a href="#agumbe" class="nav-link" role="tab" data-toggle="tab">Agumbe Tang, CTP</a></li>
+            <li class="nav-item"><a href="#alberto" class="nav-link" role="tab" data-toggle="tab">Alberto Somayya, Executive Chef </a></li>
+        </ul>
+       
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="peter" role="tabpanel">
+        <h3>Peter Pan <small>Chief Epicurious Officer</small></h3>
+        <p class="d-none d-sm-block">Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.</p>
+        </div>
+        <div class="tab-pane fade " id="danny" role="tabpanel">
+        <h3>Dhanasekaran Witherspoon <small>Chief Food Officer</small></h3>
+        <p class="d-none d-sm-block">Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, <em>Everything that runs, wins, and everything that stays, pays!</em></p>
+       </div>
+       <div class="tab-pane fade" id="agumbe" role="tabpanel">
+        <h3>Agumbe Tang <small>Chief Taste Officer</small></h3>
+        <p class="d-none d-sm-block">Blessed with the most discerning gustatory sense, Agumbe, our CTO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, <em>You click only if you survive my lick.</em></p>
+       </div>
+       <div class="tab-pane fade" id="alberto" role="tabpanel">
+        <h3>Nidhi Gahlawat <small>Executive Chef</small></h3>
+        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, she specializes in creating mouthwatering Indian cuisines. She says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em></p>
+        </div>
+        
+    </div>
+    </div>
+</div>
+
+<div class="row row-content">
+   <div class="col-12 col-sm-9">
+       <h2>Facts &amp; Figures</h2>
+       <div class="table-responsive">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>2019</th>
+                    <th>2020</th>
+                    <th>2021</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Employees</th>
+                    <td>15</td>
+                    <td>30</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <th>Guests Served</th>
+                    <td>15000</td>
+                    <td>45000</td>
+                    <td>100,000</td>
+                </tr>
+                <tr>
+                    <th>Special Events</th>
+                    <td>3</td>
+                    <td>20</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <th>Annual Turnover</th>
+                    <td>₹2,05.13,325</td>
+                    <td>₹1,54,25,375</td>
+                    <td>~₹1,04,17,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   </div>
+   <div class="col-12 col-sm-3">
+       
+   </div>
+</div>
+</div>
+</div>
+  <!-- about2 stops-->
+
+      </div>
+  
+  </section>
+  
+  <!-- about section ends  -->
+  
+  
+  <!-- dish section starts  -->
+  
+  <section id="dish" class="container">
+  
+      <div class="heading text-center">
+          <h1>our <span>dishes</span></h1>
+      </div>
+  
+      <div class="box-container">
+  
+          <div class="box">
+              <img src="{%static 'images/dish7.jpg' %}" alt="">
+              <div class="info">
+                  <h3>Pizza - ₹195</h3>
+                  <p>dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil ,oregano , tomato , olives ,mozzarella or other cheese.
+                </p>
+                  <a ><button>Pizza</button></a>
+              </div>
+          </div>
+  
+          <div class="box">
+              <img src="{%static 'images/dish8.jpg' %}" alt="">
+              <div class="info">
+                  <h3>paneer butter masala - ₹139</h3>
+                  <p>Paneer Butter Masala is one of the most popular side dishes eaten with rotis.</p>
+                  <a ><button> butter masala</button></a>
+              </div>
+          </div>
+  
+          <div class="box">
+              <img src="{%static 'images/dish11.jpg' %}" alt="">
+              <div class="info">
+                  <h3>Noddles - ₹ 80</h3>
+                  <p>Noodles are a type of food made from unleavened dough which is rolled flat and cut, stretched or extruded.</p>
+                  <a ><button>Noddles</button></a>
+              </div>
+          </div>
+  
+          <div class="box">
+              <img src="{%static 'images/dish10.jpg' %}" alt="">
+              <div class="info">
+                  <h3>Veg Biryani - ₹90</h3>
+                  <p>Long-grained rice (like basmati) flavoured with fragrant spices such as saffron and layered with vegetables and a thick gravy.</p>
+                  <a ><button>Veg Biryani</button></a>
+              </div>
+          </div>
+  
+          <div class="box">
+              <img src="{%static 'images/dish9.jpg' %}" alt="">
+              <div class="info">
+                  <h3>Tomato soup</h3>
+                  <p>Tomato Soup is a soup with tomatoes as the primary ingredient . It can be served hot or cold and may be made in a variety of ways.</p>
+                  <a ><button>Tomato soup</button></a>
+              </div>
+          </div>
+  
+          <div class="box">
+              <img src="{%static 'images/dish6.jpg' %}" alt="">
+              <div class="info">
+                  <h3>Tandoori Chicken - ₹ 180</h3>
+                  <p>Tandoori chicken, a dish of roasted chicken marinated in yogurt and generously spiced</p>
+                  <<button>Tandoori Chicken</button>
+              </div>
+          </div>
+  
+      </div>
+  
+  </section>
+  
+  <!-- dish section ends  -->
+  
+  <!-- contact section starts  -->
+  
+  <section  class="container-fluid">
+  
+      <div style="  font-size: 4rem;
+      color: rgb(54, 165, 109);
+      padding-top: 7rem;
+      margin-bottom: 2rem;" class="heading text-center">
+          <h1><span>Order </span> Now</h1>
+      </div>
+  
+      <div class="row justify-content-center">
+  
+
+        <section id="footer" class="container-fluid">
+  
+            <div class="row align-items-center">
+            
+            <div class="col-md-4 brand">
+            
+           
+            
+            </div>
+            
+            <div class="col-md-4 footer-links">
+            
+           
+            
+            
+            <div style="text-align: center;" class="col-md-12 text-center text-md-left letter">
+                <h3>Click here to order:</h3>
+             
+             <a href="{{link}}"><input  type="submit" value="ORDER"></a>
+            </div>
+          
+            </div>
+            
+            
+            
+            </section>
+  
+  </section>
+  
+  <!-- contact section ends  -->
+  
+  <!--selecting item-->
+  
+
+  <!-- order section-->
+  
+  
+
+ 
+      
+
+      <section id="" class="container-fluid">
+  
+        <div class="heading text-center">
+            <h1><span>contact </span> us</h1>
+        </div>
+    
+        <div class="row justify-content-center" style="font-size: 14px;">
+    
+            <div class="container">
+                
+        
+                <div class="row row-content">
+                   <div class="col-12">
+                      <h3>Location Information</h3>
+                   </div>
+                    <div class="col-12 col-sm-4 ">
+                           <h5>Our Address</h5>
+                           
+                           <address style="font-size: 100%;">
+                            121, AB-XY Area, A-Road<br>
+                            Chikmagalur, Karnataka<br>
+                            INDIA<br>
+                           <i class="fa fa-phone fa-lg"></i>  +91 12345 67890 <br>
+                           <i class="fa fa-fax fa-lg"></i>   +91 9945599279<br>
+                           <i class="fa fa-envelope fa-lg"></i> <a href="mailto:adwinhr@gmail.com.com">adwinhr@gmail.com</a>
+                         </address>
+                
+                    </div>
+                    <div class="col-12 col-sm-6 offset-sm-1">
+                        <h5>Map of our Location</h5>
+                        <!--Google map-->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62121.54822162122!2d75.7374289701904!3d13.313110801820814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbad762c8a889dd%3A0xb3cf49155294be16!2sChikmagalur%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1626523763084!5m2!1sen!2sin"
+             width="400" height="190" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"     tabindex="0"></iframe>    
+        
+          
+          <!--Google Maps-->
+                    </div>
+                    
+                    <div class="col-12 col-sm-11 ">
+                        <!-- Button group goes here -->
+                        <div class="btn-group" role="group">
+                            <a role="button" class="btn btn-primary" href="Tel: +91 123456789"><i class="fa fa-phone fa-lg"></i>Call</a>
+                            <a role="button" class="btn btn-info"><i class="fa fa-skype fa-lg"></i>Skype</a>
+                            <a role="button" class="btn btn-success" href="abc@gmail.com"><i class="fa fa-envelope-o fa-lg"></i>Email</a>
+                        </div>
+                    </div>
+                </div>
+        
+               
+    
+    </section>
+  <!-- footer section starts  -->
+  
+  <section id="footer" class="container-fluid">
+  
+  <div class="row align-items-center">
+  
+  <div class="col-md-4 brand">
+  
+ 
+  
+  </div>
+  
+  <div class="col-md-4 footer-links">
+  <h3>links:</h3>
+  <a href="#home">home</a>
+  <a href="#special">special</a>
+  <a href="#about">about</a>
+  <a href="#dish">dish</a>
+  <a href="#contact">contact</a>
+  </div>
+  
+  <div class="col-md-4 text-center text-md-left letter">
+  
+   
+   <a href="http://127.0.0.1:8000/admin"><input  type="submit" value="ADMIN"></a>
+  </div>
+
+  </div>
+  
+  <h1>&copy; Designed by Team 15 <span> </span></h1>
+  
+  </section>
+  
+  <!-- footer section ends  -->
+  <!-- selectingthe item-->
+
+  <script>
+    $(document).ready(function(){
+        $("#mycarousel").carousel( { interval: 2000 } );
+        $("#carouselButton").click(function(){
+           if($("#carouselButton").children("span").hasClass('fa-pause')){
+               $("#mycarousel").carousel('pause');
+               $("#carouselButton").children("span").removeClass('fa-pause');
+               $("#carouselButton").children("span").addClass('fa-play');
+           }
+           else if($("#carouselButton").children("span").hasClass('fa-play')){
+               $("#mycarousel").carousel('cycle');
+               $("#carouselButton").children("span").removeClass('fa-play');
+               $("#carouselButton").children("span").addClass('fa-pause');
+           }
+        });
+    });
+    $(document).ready(function(){
+        $("#reserve").click(function(){
+        $("#tableReserve").modal('toggle');
+        });
+    });
+
+
+    $(document).ready(function(){
+        $('#birth-date').mask('00/00/0000');
+        
+       })
+    </script>    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  <!-- script part starts  -->
+</body>
